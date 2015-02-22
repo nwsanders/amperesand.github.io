@@ -20,7 +20,7 @@ For this first exercice the password is stored in plaintext.
 ;*3$&amp;quot;
 ...
 &lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;However, for the purpose of this post, I want to reconstruct the original C source code. To do this, I'll fire up the ever-trusty &lt;code&gt;gdb&lt;/code&gt; to analyze the structure of the executable.&lt;/p&gt;
+&lt;p&gt;However, for the purpose of this post, I want to reconstruct the original C source code. To do this, I'll fire up the ever-trusty GNU Debugger (gdb) to analyze the structure of the executable.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;nathan@mint ~/exrs $ gdb r1
 Reading symbols from r1...(no debugging symbols found)...done.
 (gdb) break main
