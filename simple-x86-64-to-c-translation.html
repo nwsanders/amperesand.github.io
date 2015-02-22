@@ -2,9 +2,12 @@
 <html lang="">	
 <head>
 	<meta charset="utf-8"/>
-	<title>sandcas.tl</title>	
+	<title>Simple X86-64 to C Translation - sandcas.tl</title>	
 	<meta name="author" content="Nathan Sanders">
 	
+
+	<meta name="description" content="The other day I set up my blog using Pelican, a static site generator, and Github Pages, a service provided by Github to provide free hosting for simple webpages. After picking a minimalistic theme and creating DNS records to point towards my custom domain, I felt it was time to ...">
+
 
 	<link rel="top" href="#" /><link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,300italic,400italic,600italic|Source+Code+Pro' rel='stylesheet' type='text/css'></link>
 	<link rel="stylesheet" href="/theme/css/main.css" type="text/css" />
@@ -27,12 +30,18 @@
 	  <div class="wrapper">
 
 		  <div role="main" class="content">
-
-
-
-      <article>
-        <h1><a href="/simple-x86-64-to-c-translation.html">Simple X86-64 to C Translation</a></h1>
-        <p>The other day I set up my blog using Pelican, a static site generator, and Github Pages, a service provided by Github to provide free hosting for simple webpages.  After picking a minimalistic theme and creating DNS records to point towards my custom domain, I felt it was time to start adding content.</p>
+	<article class="full">
+			
+		<h1>Simple X86-64 to C Translation</h1>
+		
+<div class="metadata">
+  <time datetime="2015-02-21T20:30:00+01:00" pubdate>Sat 21 February 2015</time>
+    <address class="vcard author">
+      by <a class="url fn" href="/author/nathan-sanders.html">Nathan Sanders</a>
+    </address>
+  in <a href="/category/reversing.html">Reversing</a>
+<p class="tags">tagged <a href="/tag/x86-64.html">x86-64</a>, <a href="/tag/c.html">C</a></p></div>		
+		<p>The other day I set up my blog using Pelican, a static site generator, and Github Pages, a service provided by Github to provide free hosting for simple webpages.  After picking a minimalistic theme and creating DNS records to point towards my custom domain, I felt it was time to start adding content.</p>
 <p>Recently I have been working through the reversing challenges hosted on wapiflapi's Github <a class="reference external" href="https://github.com/wapiflapi/exrs">page</a>.  In these challenges, you are provided a 64-bit ELF executable file with no source code or debugging symbols.  The objective is to find the password hidden in the executable.</p>
 <div class="highlight"><pre>nathan@mint ~/exrs $ ./r1
 Usage : ./r1 password
@@ -269,13 +278,14 @@ Dump of assembler code for function compare_pwd:
 0x00000000004005d0 &lt;+19&gt;:  mov    edi,0x4006d8
 </pre></div>
 <p>Excellent! We're passing the arguments to <code>strcmp()</code> in the correct order now, and we have an equivalent copy of the original code.</p>
+	
 
-      </article>
+	</article>
 
-      <hr />
-
-    
-
+    <p>
+	<a href="https://twitter.com/share" class="twitter-share-button" data-via="" data-lang="en" data-size="large" data-related="">Tweet</a>
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+	</p>
 
 
 		  </div>	
@@ -285,7 +295,7 @@ Dump of assembler code for function compare_pwd:
 	        <nav>
 	          <h2>Categories</h2>
 	          <ul>
-	              <li ><a href="/category/reversing.html">Reversing</a></li>
+	              <li class="active"><a href="/category/reversing.html">Reversing</a></li>
 	          </ul>
 	        </nav>
 
